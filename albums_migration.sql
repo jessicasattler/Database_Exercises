@@ -14,9 +14,9 @@ CREATE TABLE albums (
 	`id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
 	`artist` VARCHAR(100) NOT NULL,
 	`name` VARCHAR(100) NOT NULL,
-	`release_date` INT UNSIGNED NOT NULL,
-	`genre_name` VARCHAR(100) NOT NULL,
-	`myssales_name` FLOAT NOT NULL,
+	`release_year` INT UNSIGNED NOT NULL,
+	`genre` VARCHAR(100) NOT NULL,
+	`sales` FLOAT NOT NULL,
 
 	PRIMARY KEY (id)
 
