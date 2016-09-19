@@ -16,7 +16,7 @@ CREATE TABLE albums (
 	`name` VARCHAR(100) NOT NULL,
 	`release_date` INT UNSIGNED NOT NULL,
 	`genre_name` VARCHAR(100) NOT NULL,
-	`sales_name` FLOAT NOT NULL,
+	`myssales_name` FLOAT NOT NULL,
 
 	PRIMARY KEY (id)
 
