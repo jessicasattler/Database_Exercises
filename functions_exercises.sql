@@ -19,6 +19,6 @@ SELECT * FROM employees WHERE last_name LIKE 'E%'AND last_name LIKE '%E' ORDER B
 /* For your query of employees born on Christmas and hired in the 90s, use datediff() to find how many days they have been working at the company (Hint: You will also need to use now() or curdate()) */
 SELECT datediff(now(),hire_date) FROM employees WHERE hire_date LIKE '199%' AND birth_date LIKE '1%-12-25' ORDER BY birth_date, hire_date DESC;
 /* Add a GROUP BY clause to your query for last names with 'q' and not 'qu' to find the distinct combination of first and last names. You will find there were some duplicate first and last name pairs in your previous results. Add a count() to your results and use ORDER BY to make it easier to find employees whose unusual name is shared with others. */
-SELECT COUNT(last_name) FROM employees WHERE last_name LIKE '%q%' AND last_name NOT LIKE '%qu%' GROUP BY first_name, last_name ORDER BY first_name, last_name;
+SELECT last_name,  COUNT(last_name)  AS 'Count of Last Name' FROM employees WHERE last_name LIKE '%q%' AND last_name NOT LIKE '%qu%' GROUP BY last_name ORDER BY last_name;
 
  
