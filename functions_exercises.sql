@@ -20,5 +20,11 @@ SELECT * FROM employees WHERE last_name LIKE 'E%'AND last_name LIKE '%E' ORDER B
 SELECT datediff(now(),hire_date) FROM employees WHERE hire_date LIKE '199%' AND birth_date LIKE '1%-12-25' ORDER BY birth_date, hire_date DESC;
 /* Add a GROUP BY clause to your query for last names with 'q' and not 'qu' to find the distinct combination of first and last names. You will find there were some duplicate first and last name pairs in your previous results. Add a count() to your results and use ORDER BY to make it easier to find employees whose unusual name is shared with others. */
 SELECT last_name,  COUNT(last_name)  AS 'Count of Last Name' FROM employees WHERE last_name LIKE '%q%' AND last_name NOT LIKE '%qu%' GROUP BY last_name ORDER BY last_name;
+/* Return 10 employees in a result set named "full_name" in the format of "lastname, firstname" for each employee. */
+SELECT CONCAT(last_name, '  ', first_name) AS full_name FROM employees  LIMIT 10;
+/* Add the date of birth for each employee as "DOB" to the query. */
 
+SELECT birth_date AS DOB FROM employees;
+/* Update the query to format full name to include the employee number so it is formatted as "employee number - lastname, firstname" */
+SELECT CONCAT(emp_no,'-',last_name,', ', first_name) AS 'full_name', birth_date AS DOB FROM employees LIMIT 10;
  
