@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>employees</string>
+			<key>host</key>
+			<string>127.0.0.1</string>
+			<key>kcid</key>
+			<string>8608220107932237205</string>
+			<key>name</key>
+			<string>Vagrant Codeup MySQL</string>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>ssh_host</key>
+			<string>192.168.77.77</string>
+			<key>ssh_keyLocation</key>
+			<string></string>
+			<key>ssh_keyLocationEnabled</key>
+			<integer>0</integer>
+			<key>ssh_user</key>
+			<string>vagrant</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPSSHTunnelConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>codeup</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>utf8</string>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFy
+			Y2hpdmVyVCR0b3ASAAGGoK0HCBUWFxgZHSQoLDA0VSRudWxs0wkK
+			CwwQFFdOUy5rZXlzWk5TLm9iamVjdHNWJGNsYXNzow0OD4ACgAOA
+			BKMREhOABYAGgAiADFR0eXBlVHJvd3NUa2V5c18QJlNlbGVjdGlv
+			bkRldGFpbFR5cGVQcmltYXJ5S2V5ZWREZXRhaWxz0wkKCxobHKCg
+			gAfSHh8gIVokY2xhc3NuYW1lWCRjbGFzc2VzXxATTlNNdXRhYmxl
+			RGljdGlvbmFyeaMgIiNcTlNEaWN0aW9uYXJ5WE5TT2JqZWN00goL
+			JSehJoAJgAvSCykqK1lOUy5zdHJpbmeACldkZXB0X25v0h4fLS5f
+			EA9OU011dGFibGVTdHJpbmejLS8jWE5TU3RyaW5n0h4fMTJeTlNN
+			dXRhYmxlQXJyYXmjMTMjV05TQXJyYXnSHh8iNaIiI18QD05TS2V5
+			ZWRBcmNoaXZlctE4OVRkYXRhgAEACAARABoAIwAtADIANwBFAEsA
+			UgBaAGUAbABwAHIAdAB2AHoAfAB+AIAAggCHAIwAkQC6AMEAwgDD
+			AMUAygDVAN4A9AD4AQUBDgETARUBFwEZAR4BKAEqATIBNwFJAU0B
+			VgFbAWoBbgF2AXsBfgGQAZMBmAAAAAAAAAIBAAAAAAAAADoAAAAA
+			AAAAAAAAAAAAAAGa
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{0, 0}, {694, 456}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>queries</key>
+			<string>SELECT CONCAT(e.first_name, ' ', e.last_name) AS full_name, d.dept_name
+FROM employees AS e
+JOIN dept_emp AS de
+  ON de.emp_no = e.emp_no
+JOIN departments AS d
+  ON d.dept_no = de.dept_no
+WHERE de.to_date = '9999-01-01' AND e.emp_no = 10001;
+
+/* shows each department along with the name of the current manager for that department. */
+SELECT d.dept_name, CONCAT(e.first_name, ' ', e.last_name) AS d.department_manager
+FROM dept_manager AS d
+JOIN employees AS e
+ ON e.emp_no = e.emp_no;
+</string>
+			<key>table</key>
+			<string>departments</string>
+			<key>view</key>
+			<string>SP_VIEW_CUSTOMQUERY</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>200</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>queryHistory</key>
+	<array>
+		<string>SELECT CONCAT(e.first_name, ' ', e.last_name) AS Full_name, d.dept_name
+FROM employees AS e
+JOIN dept_emp AS de
+  ON de.emp_no = e.emp_no
+JOIN departments AS d
+  ON d.dept_no = de.dept_no
+WHERE de.to_date = '9999-01-01' AND e.emp_no = 10001</string>
+		<string>SELECT CONCAT(e.first_name, ' ', e.last_name) AS full name, d.dept_name
+FROM employees AS e
+JOIN dept_emp AS de
+  ON de.emp_no = e.emp_no
+JOIN departments AS d
+  ON d.dept_no = de.dept_no
+WHERE de.to_date = '9999-01-01' AND e.emp_no = 10001</string>
+		<string>SELECT CONCAT(e.first_name, ' ', e.last_name) AS full_name, d.dept_name
+FROM employees AS e
+JOIN dept_emp AS de
+  ON de.emp_no = e.emp_no
+JOIN departments AS d
+  ON d.dept_no = de.dept_no
+WHERE de.to_date = '9999-01-01' AND e.emp_no = 10001</string>
+		<string>SELECT * FROM dept_manager</string>
+		<string>/* shows each department along with the name of the current manager for that department. */
+SELECT d.dept_name, CONCAT (e.first_name, ' ', e.last_name) AS full_name
+FROM employees AS e</string>
+		<string>/* shows each department along with the name of the current manager for that department. */
+SELECT dept_name * FROM departments</string>
+		<string>SELECT * FROM dept_emp</string>
+		<string>SELECT * FROM departments</string>
+		<string>/* shows each department along with the name of the current manager for that department. */
+SELECT dept_name FROM departments</string>
+		<string>/* shows each department along with the name of the current manager for that department. */
+SELECT  * FROM departments</string>
+		<string>/* shows each department along with the name of the current manager for that department. */
+SELECT d.dept_name * FROM departments</string>
+		<string>SELECT CONCAT(e.first_name, ' ', e.last_name) AS full_name, d.dept_name
+FROM employees as e
+JOIN dept_emp as de
+  ON de.emp_no = e.emp_no
+JOIN departments as d
+  ON d.dept_no = de.dept_no
+WHERE de.to_date = '9999-01-01' AND e.emp_no = 10001</string>
+		<string>SELECT last_name, first_name FROM employees ORDER BY last_name DESC</string>
+		<string>SELECT * FROM employees</string>
+		<string>/*  Use count and the appropriate join type to get a list of roles along with the number of users that has the role. Hint: You will also need to use group by in the query. */
+SELECT  users.name AS user_name , roles.name AS role_name, COUNT (roles)
+FROM roles
+LEFTT JOIN users ON  roles.id = users.role_id GROUP BY roles.name</string>
+		<string>SELECT * FROM roles</string>
+		<string>SELECT * FROM users</string>
+		<string>/*  Use count and the appropriate join type to get a list of roles along with the number of users that has the role. Hint: You will also need to use group by in the query. */
+SELECT COUNT (NAME), roles.name AS role_name
+FROM roles</string>
+		<string>/*  Use count and the appropriate join type to get a list of roles along with the number of users that has the role. Hint: You will also need to use group by in the query. */
+SELECT COUNT (NAME) 
+FROM roles</string>
+		<string>/*  Use count and the appropriate join type to get a list of roles along with the number of users that has the role. Hint: You will also need to use group by in the query. */
+SELECT COUNT (id) FROM users</string>
+	</array>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>5.5.49-0ubuntu0.14.04.1-log</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>
