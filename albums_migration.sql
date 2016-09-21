@@ -12,11 +12,11 @@ DROP TABLE IF EXISTS albums;
 
 CREATE TABLE albums (
 	`id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-	`artist` VARCHAR(100) NOT NULL,
-	`name` VARCHAR(100) NOT NULL,
-	`release_year` INT UNSIGNED NOT NULL,
-	`genre` VARCHAR(100) NOT NULL,
-	`sales` FLOAT NOT NULL,
+	`artist` VARCHAR(100),
+	`name` VARCHAR(100),
+	`release_year` INT UNSIGNED,
+	`genre` VARCHAR(100),
+	`sales` FLOAT,
 
 	PRIMARY KEY (id)
 
