@@ -22,6 +22,7 @@ JOIN
 ON
 WHERE;
 
+
 /* Find all the titles held by all employees with the first name Aamod. */
 SELECT title
 FROM titles
@@ -31,13 +32,15 @@ WHERE emp_no IN(
 	WHERE first_name = 'Aamod'
 )
 GROUP BY title;
+
 /* AS join */
 SELECT title
 FROM titles AS t
 JOIN employees AS e
  ON e.emp_no = t.emp_no
- WHERE e.first_name = 'Aamod'
- GROUP BY title;
+WHERE e.first_name = 'Aamod'
+GROUP BY title;
+ 
 
 /* Find all the current department managers that are female. */
 SELECT *
@@ -89,8 +92,19 @@ AND dm.to_date = '9999-01-01';
 
  
 /*  ```-- what is the most common birthday in the company? least common? */
- SELECT birth_date
- FROM employees;
+/* most common , groups sorts them in order as well*/
+ SELECT birth_date, count(birth_date)
+ FROM employees
+ GROUP BY birth_date DESC 
+ ORDER BY count(birth_date)DESC
+ LIMIT 1;
+ 
+/*  least common, groups sorts them in order as well */
+  SELECT birth_date, count(birth_date)
+ FROM employees
+ GROUP BY birth_date ASC 
+ ORDER BY count(birth_date)ASC
+ LIMIT 1;
  
 /* -- what is the average salary of managers by department? */
 
