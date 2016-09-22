@@ -24,19 +24,19 @@ JOIN employees AS e
 ON e.emp_no = dm.emp_no
 WHERE dm.to_date LIKE '9999%' AND e.gender = 'f';
 
-/* Find the current titles of employees currently working IN the Customer Service department. */
-SELECT t.title, COUNT(t.title) AS 'Count with title'
-FROM employees AS e
-JOIN dept_emp AS de
-	ON  e.emp_no = de.emp_no
-JOIN departments AS d
-	ON de.emp_no = t.emp_no
-JOIN titles AS t
-	ON e.emp_no = t.emp_no
-WHERE d.dept_name = 'Customer SErvice'
-	AND de.to_date = '9999-01-01'
-	AND t.to_date = '9999-01-01'
-GROUP BY t.title;
+
+ /*  Find the current titles of employees currently working in the Customer Service department. */
+ SELECT  t.title AS Titles, COUNT(t.title) AS Count
+ FROM titles AS t
+ JOIN dept_emp AS de
+  ON t.emp_no = de.emp_no
+ JOIN departments AS d
+ ON de.dept_no = d.dept_no
+ WHERE de.to_date = '9999-01-01'
+ 	AND d.dept_name = 'Customer Service' 
+ 	GROUP BY t.title;
+
+
 
 /* Find the current salary of all current managers. */
 
