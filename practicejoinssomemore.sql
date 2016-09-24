@@ -42,8 +42,14 @@ SELECT  t.title AS Titles, COUNT(t.title) AS Count
  	GROUP BY t.title;
  
 /*  Find the salary of ALL the current managers */
-SELECT
-FROM 
-JOIN
-	ON 
-WHERE to_date LIKE '999%';
+SELECT dept_name,CONCAT(first_name, ' ', last_name),salary
+FROM departments AS d
+JOIN dept_manager AS dm
+	ON d.dept_no = dm.dept_no
+JOIN employees AS e
+	ON dm.emp_no = e.emp_no
+JOIN salaries AS s
+	ON e.emp_no = s.emp_no
+WHERE dm.to_date LIKE '999%'
+	AND	s.to_date LIKE '999%'
+GROUP BY d.dept_name;
